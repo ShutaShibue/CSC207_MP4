@@ -90,15 +90,15 @@ public class AssociativeArray<K, V> {
    * get(key) will return value.
    */
   public void set(K key, V value) {
-    size++;
     try {
-      // If the key already exists
+      // If the key already exists, size is same
       int index = find(key);
       pairs[index] = new KVPair<K, V>(key, value);
     } catch (Exception e) {
-      //find null space
+      //find null space, set it and increment size
       for (int i = 0; i < pairs.length; i++) {
         if(pairs[i] == null){
+          size++;
           pairs[i] = new KVPair<K, V>(key, value);
           return;
         }
@@ -106,6 +106,7 @@ public class AssociativeArray<K, V> {
       // If there is no space
       expand();
       pairs[size+1] = new KVPair<K, V>(key, value);
+      size++;
     }
   } // set(K,V)
 

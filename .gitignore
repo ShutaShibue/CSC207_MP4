@@ -2,4 +2,3 @@ bin/
 lib/
 .vscode
 src/structures/AssociativeArrayExperiments.java
-src/structures/AssociativeArrayTests.java
