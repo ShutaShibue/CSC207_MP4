@@ -1,18 +1,16 @@
-## Getting Started
+# CSC207_MP3
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Author
 
-## Folder Structure
+Shuta Shibue
 
-The workspace contains two folders by default, where:
+## Contents
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- AssociativeArray.java: Implementation of the array\\
+- KeyNotFoundException.java: Exeption class copied from assignment\\
+- KVPair.java: class to store key-value pair, copied from assignment\\
+- ReportingAssociativeArray.java: A wrapper class for the assoc array.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Resources
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+SamR's Eboard: <https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/eboards/eboard17.html>
