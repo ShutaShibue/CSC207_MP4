@@ -90,6 +90,7 @@ public class AssociativeArray<K, V> {
    * get(key) will return value.
    */
   public void set(K key, V value) {
+    //if key is null, throw error. Value being null is fine.
     try {
       // If the key already exists, size is same
       int index = find(key);
@@ -174,7 +175,10 @@ public class AssociativeArray<K, V> {
   public int find(K key) throws KeyNotFoundException {
     for (int i = 0; i < pairs.length; i++) {
       if(pairs[i] == null) continue;
-      if(pairs[i].key.equals(key)) return i;
+      if(pairs[i].key == null) {
+        if(key == null) return i; //null can't be compared using Object.equals(), so separated it.
+      }
+      else if(pairs[i].key.equals(key)) return i;
     }
     throw new KeyNotFoundException();
   } // find(K)
